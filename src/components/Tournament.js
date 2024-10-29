@@ -17,11 +17,11 @@ const Tournament = ({ setEvents, events }) => {
   };
 
   return (
-    <div id="tournament">
-      <div className="header header-tournament">
-        <h1 className="justify-center">Create tournament</h1>
+    <div className="w-160 h-150 rounded-2xl heavenblue font-frank-ruhl text-5xl text-black flex flex-col box-border">
+      <div className="w-full h-[80px] flex justify-center items-center purple rounded-t-[20px]  mb-[40px]">
+        <h1 className="justify-center text-[32px]">Create tournament</h1>
       </div>
-      <form onSubmit={handleSubmit} className="form">
+      <form onSubmit={handleSubmit} className="flex flex-col gap-5 w-full items-center justify-center;">
         <input
           required
           type="text"
@@ -45,7 +45,7 @@ const Tournament = ({ setEvents, events }) => {
           value={date}
           onChange={(e) => setDate(e.target.value)}  // Update date state
         />
-        <button type="submit">Done</button>
+        <button className="w-[220px] mt-[105px] py-5 text-4xl purple rounded-2xl">Done</button>
       </form>
     </div>
   );

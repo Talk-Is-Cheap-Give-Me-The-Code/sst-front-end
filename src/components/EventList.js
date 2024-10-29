@@ -8,7 +8,7 @@ const EventList = ({ events }) => {
   }
 
   return (
-    <div id="event-list">
+    <div className="flex flex-col gap-5">
       {events.map((event, index) => (
         // Map through events and render an Ivent for each
         <Ivent key={index} city={event.city} members={event.members} date={event.date} />
