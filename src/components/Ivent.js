@@ -4,12 +4,12 @@ import React from "react";
 const Ivent = ({ city, members, date }) => {
   // Display all data
   return (
-    <div id="ivent" className="relative w-[850px] h-[150px] heavenblue rounded-2xl font-frank-ruhl text-black flex flex-col">
-      <div className="w-full h-[60px] flex justify-center items-center purple rounded-t-[20px]  mb-[20px] relative">
-        <label className=" flex-1 justify-center">{city}</label> 
-        <label className=" justify-end">{date}</label> 
+    <div className="ivent relative w-[850px] h-[150px] heavenblue rounded-2xl font-frank-ruhl flex flex-col">
+      <div className="ivent__header w-full h-[60px] flex justify-center items-center purple rounded-t-[20px] mb-[20px] relative">
+        <label className="ivent__city flex-1 justify-center">{city}</label> 
+        <label className="ivent__date justify-end">{date}</label> 
       </div>
-      <label className="text-left pl-20">{members} members</label> 
+      <label className="ivent__members text-left pl-20">{members} members</label> 
     </div>
   );
 };

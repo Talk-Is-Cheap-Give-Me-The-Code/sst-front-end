@@ -17,17 +17,18 @@ const Tournament = ({ setEvents, events }) => {
   };
 
   return (
-    <div className="w-160 h-150 rounded-2xl heavenblue font-frank-ruhl text-5xl text-black flex flex-col box-border">
-      <div className="w-full h-[80px] flex justify-center items-center purple rounded-t-[20px]  mb-[40px]">
-        <h1 className="justify-center text-[32px]">Create tournament</h1>
+    <div className="tournament w-160 h-150 rounded-2xl heavenblue font-frank-ruhl text-5xl flex flex-col box-border">
+      <div className="tournament__header w-full h-[80px] flex justify-center items-center purple rounded-t-[20px] mb-[40px]">
+        <h1 className="tournament__title text-[32px]">Create tournament</h1>
       </div>
-      <form onSubmit={handleSubmit} className="flex flex-col gap-5 w-full items-center justify-center;">
+      <form onSubmit={handleSubmit} className="tournament__form flex flex-col gap-5 w-full items-center justify-center">
         <input
           required
           type="text"
           placeholder="City"
           value={city}
           onChange={(e) => setCity(e.target.value)}  // Update city state
+          className="tournament__input"
         />
         <input
           required
@@ -35,6 +36,7 @@ const Tournament = ({ setEvents, events }) => {
           placeholder="Members"
           value={members}
           onChange={(e) => setMembers(e.target.value)}  // Update members state
+          className="tournament__input"
         />
         <input
           placeholder="Date"
@@ -44,8 +46,9 @@ const Tournament = ({ setEvents, events }) => {
           onBlur={(e) => (e.target.type = "text")}    // Change back to text on blur
           value={date}
           onChange={(e) => setDate(e.target.value)}  // Update date state
+          className="tournament__input"
         />
-        <button className="w-[220px] mt-[105px] py-5 text-4xl purple rounded-2xl">Done</button>
+        <button className="tournament__button w-[220px] mt-[105px] py-5 text-4xl purple rounded-2xl">Done</button>
       </form>
     </div>
   );

@@ -28,6 +28,3 @@ input {
   @apply h-14 w-full max-w-[600px] text-lg rounded-2xl border border-gray-300 box-border;
 }
 
-label{
-  @apply flex text-[32px] font-frank-ruhl
-}
